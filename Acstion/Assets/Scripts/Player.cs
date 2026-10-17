@@ -43,6 +43,10 @@ public class Player : MonoBehaviour
     [Header("サウンド -- 死亡 SE")]
     [SerializeField] AudioClip deathClip;
 
+    // 死亡したかを外から読めるようにする（GameManager・Goal で使う）
+    public bool IsDead => isDead;
+
+
     // これ未満の入力は無視（スティックのわずかな傾き対策）
     float minInputToMove = 0.2f;
     Rigidbody2D rigidBody2D;       // 物理特性（速度・重力など）を扱う変数
